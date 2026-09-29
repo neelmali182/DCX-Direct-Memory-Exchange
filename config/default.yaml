@@ -1,0 +1,30 @@
+# Decision Memory Configuration (v0.1)
+
+thresholds:
+  direct_reuse: 0.90
+  jev_with_evidence: 0.60
+  llm_plus_jev: 0.30
+
+audit_rate: 0.05
+
+source_trust:
+  human: 1.0
+  jev: 0.9
+  llm: 0.8
+
+k: 2
+min_confirmations_for_reuse: 3
+unproven_cap: 0.85
+expiry_days: 90
+
+risk_policy:
+  high_risk_action_tags:
+    - delete
+    - overwrite
+    - payment
+    - send_external
+    - deploy
+  high_risk_behavior: require_human
+
+storage:
+  data_dir: ./memory

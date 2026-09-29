@@ -1,0 +1,40 @@
+{
+  "name": "decision-memory",
+  "version": "0.1.0",
+  "description": "Decision memory system with confidence-based routing and audit",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "dm": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "tsc --noEmit",
+    "dm": "node ./dist/cli.js",
+    "example": "node ./dist/examples/support_ticket_triage.js",
+    "simulate": "node ./dist/eval/simulate.js"
+  },
+  "keywords": [
+    "decision",
+    "memory",
+    "agent",
+    "confidence"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^26.6.3",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.2"
+  },
+  "dependencies": {
+    "csv-parse": "^7.0.3",
+    "csv-stringify": "^6.9.0",
+    "js-yaml": "^5.4.2"
+  }
+}
